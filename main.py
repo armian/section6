@@ -197,7 +197,8 @@ class Main(QMainWindow, Ui_MainWindow):
         self.append_log_msg('Download Click')
 
     # 100 -> 90 -> ... -> 0
-    def showProgressDownLoading(self, stream, chunk, file_handler, bytes_remaining):
+    #def showProgressDownLoading(self, stream, chunk, file_handle, bytes_remaining):
+    def showProgressDownLoading(self, stream, chunk, bytes_remaining):
         print(int(self.youtb_fsize - bytes_remaining))
         print('bytes_remaining', bytes_remaining)
         self.progressBar_2.setValue(int(((self.youtb_fsize - bytes_remaining) / self.youtb_fsize) * 100))
